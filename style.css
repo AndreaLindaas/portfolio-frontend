@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: "Nanum Gothic", sans-serif;
+}
+header ul {
+  margin: 0 78px 0 0;
+  display: grid;
+  grid-template-columns: 78px 94px 100px;
+  gap: 10px;
+  justify-content: right;
+}
+header ul li {
+  margin-top: 36px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 26px;
+}
+header {
+  background-color: black;
+  height: 100px;
+}
+main {
+  height: 400px;
+}
+footer {
+  height: 300px;
+  background-color: black;
+}
+.menu-button {
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  /* .menu-button {
+    display: none;
+  } */
+}
