@@ -12,8 +12,7 @@ const schoolProject = document.querySelector(".schoolproject");
 const description = document.querySelector(".description");
 const images = document.querySelector(".images");
 const technicalDescription = document.querySelector(".technical-description");
-const productionUrl = document.querySelector(".production-url");
-const githubUrl = document.querySelector(".github-url");
+const buttons = document.querySelector(".buttons");
 
 async function getProject() {
   const response = await fetch(url);
@@ -24,16 +23,23 @@ async function getProject() {
 function showProject(project) {
   console.log("fdff", project);
   title.innerHTML = project.title;
-  releaseDate.innerHTML = project.releaseDate;
-  schoolProject.innerHTML = project.isSchoolProject;
+  releaseDate.innerHTML = `Dato ${project.releaseDate}`;
+  if (project.isSchoolProject == true) {
+    schoolProject.innerHTML = `| Skoleprosjekt`;
+  } else {
+    schoolProject.innerHTML = `| Freelance`;
+  }
+
   description.innerHTML = project.description;
 
   for (let i = 0; i < project.images.length; i++) {
-    images.innerHTML += project.images[i].asset._ref;
+    images.innerHTML += `<img src="${createImageUrl(
+      project.images[i].asset._ref
+    )}"/>`;
   }
-
   technicalDescription.innerHTML = project.technicalDescription;
-  productionUrl.innerHTML = project.productionUrl;
-  githubUrl.innerHTML = project.githubUrl;
+
+  buttons.innerHTML = `<a href="${project.productionUrl}" class="button">Besøk ${project.title}</a>`;
+  buttons.innerHTML += `<a href="${project.githubUrl}" class="button">GitHub</a>`;
 }
 getProject();

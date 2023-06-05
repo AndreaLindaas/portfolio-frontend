@@ -1,39 +1,103 @@
+:root {
+  --black: #000;
+  --darkblue: #1363df;
+  --lightblue: #47b5ff;
+  --skye: #dff6ff;
+  --white: #fff;
+}
 body {
   margin: 0;
   font-family: "Nanum Gothic", sans-serif;
 }
+ul {
+  list-style-type: none;
+}
 header ul {
-  margin: 0 78px 0 0;
   display: grid;
   grid-template-columns: 78px 94px 100px;
   gap: 10px;
   justify-content: right;
+  margin: 0;
 }
 header ul li {
-  margin-top: 36px;
+  margin: 36px 20px;
 }
+nav {
+  background: var(--black);
+  position: absolute;
+  right: 0;
+  top: 100px;
+}
+
 nav a {
-  color: white;
+  color: var(--white);
   text-decoration: none;
   font-size: 26px;
 }
 header {
-  background-color: black;
+  background-color: var(--black);
   height: 100px;
-}
-main {
-  height: 400px;
-}
-footer {
-  height: 300px;
-  background-color: black;
-}
-.menu-button {
-  color: white;
+  margin-bottom: 30px;
 }
 
+footer {
+  height: 300px;
+  background-color: var(--black);
+}
+.menu-button {
+  color: var(--white);
+  position: absolute;
+  right: 50px;
+  top: 28px;
+  font-size: 40px;
+}
+ul.menu-choices.show {
+  display: block;
+}
+ul.menu-choices {
+  display: none;
+
+  padding: 10px 20px;
+}
+.content {
+  margin-left: 40px;
+  max-width: 600px;
+}
+.date-schoolproject {
+  display: grid;
+  grid-template-columns: 136px auto;
+}
+img {
+  width: 254px;
+  margin: 0 10px;
+}
+.description,
+.technical-description {
+  margin: 20px 0;
+}
+.button {
+  background: var(--lightblue);
+  color: var(--white);
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 6px;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: 86px 100px;
+  margin: 50px 0;
+}
 @media screen and (min-width: 768px) {
-  /* .menu-button {
+  .menu-button {
     display: none;
-  } */
+  }
+
+  ul.menu-choices,
+  ul.menu-choices.show {
+    display: grid;
+  }
+
+  nav {
+    position: inherit;
+  }
 }
