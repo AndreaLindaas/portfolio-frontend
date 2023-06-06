@@ -35,11 +35,15 @@ function showProject(project) {
   for (let i = 0; i < project.images.length; i++) {
     images.innerHTML += `<img src="${createImageUrl(
       project.images[i].asset._ref
-    )}"/>`;
+    )}?w=800"/>`;
   }
   technicalDescription.innerHTML = project.technicalDescription;
 
-  buttons.innerHTML = `<a href="${project.productionUrl}" class="button">Besøk ${project.title}</a>`;
-  buttons.innerHTML += `<a href="${project.githubUrl}" class="button">GitHub</a>`;
+  if (project.productionUrl) {
+    buttons.innerHTML = `<a href="${project.productionUrl}" class="button">Besøk ${project.title}</a>`;
+  }
+  if (project.githubUrl) {
+    buttons.innerHTML += `<a href="${project.githubUrl}" class="button">GitHub</a>`;
+  }
 }
 getProject();
