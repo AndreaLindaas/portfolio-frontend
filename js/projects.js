@@ -12,7 +12,11 @@ async function getWork() {
 
 function showWork(workArray) {
   for (let i = 0; i < workArray.length; i++) {
-    const work = `<li><a href="project.html?id=${workArray[i]._id}"><div>${workArray[i].title}</div></a></li>`;
+    const work = `<li class="card"><a href="project.html?id=${
+      workArray[i]._id
+    }"><img src="${createImageUrl(
+      workArray[i].images[0].asset._ref
+    )}"/><div class="card-title">${workArray[i].title}</div></a></li>`;
     workHtml.innerHTML += work;
   }
 }

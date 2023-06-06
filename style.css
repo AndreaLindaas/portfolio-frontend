@@ -5,6 +5,12 @@
   --skye: #dff6ff;
   --white: #fff;
 }
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+}
 body {
   margin: 0;
   font-family: "Nanum Gothic", sans-serif;
@@ -31,7 +37,6 @@ nav {
 
 nav a {
   color: var(--white);
-  text-decoration: none;
   font-size: 26px;
 }
 header {
@@ -59,8 +64,28 @@ ul.menu-choices {
 
   padding: 10px 20px;
 }
+/*Projects*/
+ul.work {
+  padding: 0;
+}
+ul.work li {
+  margin: 20px auto;
+}
+.card {
+  width: 80%;
+}
+.card-title {
+  padding: 0 0 28px 0;
+  text-align: center;
+  background: var(--darkblue);
+  color: var(--white);
+  height: 50px;
+  line-height: 74px;
+  margin-top: -24px;
+}
+/*Project*/
 .content {
-  margin-left: 40px;
+  margin: 60px 0 0 40px;
   max-width: 600px;
 }
 .date-schoolproject {
@@ -68,8 +93,10 @@ ul.menu-choices {
   grid-template-columns: 136px auto;
 }
 img {
-  width: 254px;
-  margin: 0 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 .description,
 .technical-description {
@@ -81,11 +108,15 @@ img {
   text-decoration: none;
   padding: 5px;
   border-radius: 6px;
+  text-align: center;
+  height: 26px;
+  line-height: 26px;
 }
 .buttons {
   display: grid;
-  grid-template-columns: 86px 100px;
+  grid-template-columns: auto auto;
   margin: 50px 0;
+  gap: 20px;
 }
 @media screen and (min-width: 768px) {
   .menu-button {
@@ -99,5 +130,21 @@ img {
 
   nav {
     position: inherit;
+  }
+  /*Projects*/
+  ul.work {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .card {
+    width: 220px;
+  }
+  .card:hover {
+    opacity: 0.7;
+  }
+}
+@media screen and (min-width: 980px) {
+  .card {
+    width: 300px;
   }
 }
