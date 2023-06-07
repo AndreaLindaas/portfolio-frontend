@@ -23,7 +23,7 @@ async function getProject() {
 function showProject(project) {
   console.log("fdff", project);
   title.innerHTML = project.title;
-  releaseDate.innerHTML = `Dato ${project.releaseDate}`;
+  releaseDate.innerHTML = `Lansert ${project.releaseDate}`;
   if (project.isSchoolProject == true) {
     schoolProject.innerHTML = `| Skoleprosjekt`;
   } else {
@@ -40,10 +40,10 @@ function showProject(project) {
   technicalDescription.innerHTML = project.technicalDescription;
 
   if (project.productionUrl) {
-    buttons.innerHTML = `<a href="${project.productionUrl}" class="button">Besøk ${project.title}</a>`;
+    buttons.innerHTML = `<a href="${project.productionUrl}" target="_blank" class="button">Besøk ${project.title}</a>`;
   }
   if (project.githubUrl) {
-    buttons.innerHTML += `<a href="${project.githubUrl}" class="button">GitHub</a>`;
+    buttons.innerHTML += `<a href="${project.githubUrl}" target="_blank" class="button">GitHub</a>`;
   }
 }
 getProject();
