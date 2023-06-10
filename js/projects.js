@@ -16,7 +16,7 @@ function showWork(workArray) {
       workArray[i]._id
     }"><img src="${createImageUrl(
       workArray[i].images[0].asset._ref
-    )}?w=400"/><div class="card-title">${workArray[i].title}</div></a></li>`;
+    )}?w=800"/><div class="card-title">${workArray[i].title}</div></a></li>`;
     workHtml.innerHTML += work;
   }
 }

@@ -33,7 +33,7 @@ header ul li {
   margin: 36px 20px;
 }
 header a:hover {
-  text-decoration: underline var(--darkblue);
+  text-decoration: underline;
 }
 nav {
   background: var(--white);
@@ -53,6 +53,7 @@ header {
 }
 main {
   background-color: var(--black);
+  padding-top: 70px;
 }
 footer {
   height: 300px;
@@ -72,6 +73,53 @@ ul.menu-choices {
   display: none;
 
   padding: 10px 20px;
+}
+/*index*/
+.image-index {
+  text-align: center;
+}
+.me {
+  width: 300px;
+  border-radius: 50%;
+}
+.index-page {
+  color: var(--white);
+}
+.index-page h1,
+.index-page h2 {
+  text-align: center;
+}
+.index-page h1 {
+  margin: 40px 0;
+}
+.index-page p {
+  width: 500px;
+  margin: 0 auto;
+  padding-left: 40px;
+}
+.index-page li {
+  margin: 0 auto;
+
+  line-height: 1.5;
+}
+
+.index-page a {
+  color: var(--white);
+}
+.index-page a:visited {
+  color: var(--white);
+}
+.index-page a:hover {
+  text-decoration: underline;
+}
+.index-page ul li {
+  padding: 10px;
+}
+.social-media {
+  text-align: center;
+}
+.year {
+  font-weight: bold;
 }
 /*Projects*/
 ul.work {
@@ -167,6 +215,15 @@ li.card img {
   nav {
     position: inherit;
   }
+  /*index*/
+  .index-page li {
+    width: 500px;
+  }
+
+  .image-index img.me {
+    margin-top: 26px;
+  }
+
   /*Projects*/
   ul.work {
     display: grid;
@@ -176,7 +233,7 @@ li.card img {
     width: 220px;
   }
   .card:hover {
-    opacity: 0.7;
+    opacity: 0.9;
   }
   /*project*/
   .color {
