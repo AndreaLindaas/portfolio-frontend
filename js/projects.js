@@ -6,7 +6,6 @@ const workHtml = document.querySelector(".work");
 async function getWork() {
   const response = await fetch(url);
   const result = await response.json();
-  console.log(result);
   showWork(result.result);
 }
 
